@@ -5,7 +5,6 @@ let database
 
 async function getDatabase() {
     const client = await MongoClient.connect('mongodb://127.0.0.1:27017')
-    //mongodb://localhost:27017/ mongodb:127.0.0.1:27017
     database = client.db('library')
 
     if(!database){
@@ -14,6 +13,4 @@ async function getDatabase() {
 
     return database
 }
-module.exports = {
-    getDatabase
-}
+module.exports = { getDatabase }
